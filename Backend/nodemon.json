@@ -1,0 +1,7 @@
+{
+    "env": {
+        "DB_USER": "User",
+        "DB_PASSWORD": "elbN2ZioU5TLqaaZ",
+        "DB_NAME":"WebSynthese"
+    }
+}
