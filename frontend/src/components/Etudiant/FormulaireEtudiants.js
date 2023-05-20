@@ -1,14 +1,20 @@
 import React, { useState, useContext } from 'react';
 
+
+import Input from '../../shared/components/FormElements/Input';
+import Button from '../../shared/components/FormElements/Button';
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import { useHistory } from 'react-router-dom';
 import {
   VALIDATOR_REQUIRE,
-  VALIDATOR_MINLENGTH
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_EMAIL
 } from '../../shared/util/validators';
 import '../../styles/FormulaireEtudiants.css';
 import { useForm } from '../../shared/hooks/form-hook';
 import { useHttpClient } from '../../shared/hooks/http-hook';
 import { AuthContext } from '../../shared/context/auth-context';
+
 const FormulaireEtudiants = () => {
   const auth = useContext(AuthContext);
   const { error, sendRequest, clearError } = useHttpClient();
@@ -68,37 +74,41 @@ const FormulaireEtudiants = () => {
           id="numAdmission"
           element="input"
           type="text"
+          label="Numéro d'Admission"
           validators={[VALIDATOR_MINLENGTH(9)]}
           title="Numero Admission"
           errorText="Entrer un numero d'admission valide"
-          onInout={inputHandler}
+          onInput={inputHandler}
         />
         <Input
           id="nomComplet"
           element="input"
           type="text"
+          label="Nom Complet"
           validators={[VALIDATOR_MINLENGTH(4)]}
           title="Nom Complet"
           errorText="Entrer votre nom complet"
-          onInout={inputHandler}
+          onInput={inputHandler}
         />
         <Input
           id="courriel"
           element="input"
-          type="text"
+          type="textarea"
+          label="Courriel"
           validators={[VALIDATOR_EMAIL()]}
           title="Courriel"
           errorText="Entrer un courriel valide"
-          onInout={inputHandler}
+          onInput={inputHandler}
         />
         <Input
           id="profil"
           element="input"
           type="text"
+          label="Profil"
           validators={[VALIDATOR_REQUIRE()]}
           title="Profil"
           errorText="Entrer un profil"
-          onInout={inputHandler}
+          onInput={inputHandler}
         />
         <Button type="submit" disabled={!formState.isValid}>
           Ajouter Etudiant

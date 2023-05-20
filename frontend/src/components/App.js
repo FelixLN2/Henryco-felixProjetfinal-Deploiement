@@ -7,15 +7,17 @@ import Accueil from './Accueil/Accueil.js';
 import Navbar from './Navbar';
 import Stages from './Stage/Stages.js'
 import Footer from './Footer/Footer.js'
-
+import Etudiants from './Etudiant/Etudiants.js'
+import FAQ from './FAQ/FAQ.js'
 function App() {
   return (
     <div className="App">
 
-      <Navbar />
-
+      
 
       <Router>
+      <Navbar />
+
         <Switch>
           <Route exact path="/" >
             <Accueil />
@@ -26,10 +28,20 @@ function App() {
           <Route path="/Accueil" >
             <Accueil />
           </Route>
+          <Route path="/Stage" >
+            <Stages />
+          </Route>
+          <Route path="/Etudiant" >
+            <Etudiants />
+          </Route>
+          <Route path="/FAQ" >
+            <FAQ />
+          </Route>
         </Switch>
+        <Footer/>
       </Router>
 
-      <Footer/>
+      
     </div>
   );
 }

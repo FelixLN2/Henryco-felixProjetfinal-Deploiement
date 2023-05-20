@@ -8,7 +8,7 @@ const etudiantsSchema = new Schema({
     numAdmission: { type: String, required: true },
     courriel: { type: String, required: true },
     profil: { type: String, required: true },
-    stage: [{ type: mongoose.Types.ObjectId, required: true, ref: "Stage" }]
+    stage: { type: mongoose.Types.ObjectId, required: true, ref: "Stage" }
 
 
 

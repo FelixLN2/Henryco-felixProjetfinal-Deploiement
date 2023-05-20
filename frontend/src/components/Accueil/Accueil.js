@@ -12,10 +12,8 @@ const Annee = 2023;
     
     
     <div className="App">
-      <header className="App-header">
-
-        {/* <img src={logo} alt="logo"></img> */}
-
+      
+      <body>
         <p>
         
 Édition {(new Date().getFullYear())}<br />
@@ -25,7 +23,8 @@ techniques de l'informatique du  Collège Montmorency!<br />
 
 À la fin de leurs études,
 les étudiants sont appelés à mettre en
-pratique les compétences acquises durant le programme.
+pratique les compétences acquises durant le programme.<br />
+
 Cela se fait grâce à la participation d'entreprises de la
 région qui les accueillent afin de finaliser leurs
 formations.<br />
@@ -47,8 +46,8 @@ Réseaux et sécurité informatique
 Développement d'applications informatiques<br />
 
       </p>
-      </header>
-      <body>
+     
+      
       
       </body>
       
