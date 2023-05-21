@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', true);
 
+
 const coursRoutes = require("./routes/cours-routes");
 const etudiantsRoutes = require("./routes/etudiants-routes");
 const professeursRoutes = require("./routes/professeurs-routes");
@@ -32,7 +33,7 @@ app.use((error, requete, reponse, next) => {
   });
 });
 
-mongoose.connect("https://henryco-felixprojetfinal-deploiement.onrender.com"
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_NAME}.rrmqgpc.mongodb.net/?retryWrites=true&w=majority`
 ).then(() => {
   app.listen(5000)
   console.log("Connexion à la base de données réussie")

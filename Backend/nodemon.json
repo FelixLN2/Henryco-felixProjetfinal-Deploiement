@@ -1,7 +1,7 @@
 {
     "env": {
-        "DB_USER": "User",
+        "DB_USER": "slsylvainlabranche",
         "DB_PASSWORD": "elbN2ZioU5TLqaaZ",
-        "DB_NAME":"WebSynthese"
+        "DB_NAME":"mern"
     }
 }
