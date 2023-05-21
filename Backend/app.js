@@ -32,7 +32,7 @@ app.use((error, requete, reponse, next) => {
   });
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/?retryWrites=true&w=majority"
+mongoose.connect("https://henryco-felixprojetfinal-deploiement.onrender.com"
 ).then(() => {
   app.listen(5000)
   console.log("Connexion à la base de données réussie")
